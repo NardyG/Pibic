@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Graficos e Números</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <table>
+              <tr>
+                <td><img src="Logo_CEFET-MG.png" alt="" width="70" height="70" class="d-inline-block align-text-top"></td>
+                <td><a class="navbar-brand" href="#">Dados Coletados</a></td>
+              </tr>
+            </table>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="a.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="b.html">Formulário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="C.html">Gráficos</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+             <!-- Adicionando o JavaScript do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    <form action="action">
+        <style>
+            .rounded-image {
+            border-radius: 10%;
+            overflow: hidden;
+            width: 100px;
+            height: 30px;
+}
+        </style>
+        <table>
+            <tr>
+                <td>
+                    <h3>Selecione o curso:</h3>
+                </td>
+                <td>
+                    <select name="curso" id="curso1" onchange="cursoFunction()" class="form-select" aria-label="Default select example">
+                        <option value="meca">Mecatrônica</option>
+                        <option value="pm">Produção de Moda</option>
+                        <option value="info">Tecnico em Informáica</option>
+                        </select>
+                </td>
+            </tr>           
+            <tr>
+                <td>
+                    <h3>Selecione o ano:</h3>
+                </td>
+                <td>
+                    <select name="ano" id="ano" onchange="anoFunction()" class="form-select" aria-label="Default select example">
+                        <option value="primeca">Primeiro</option>
+                        <option value="segmeca">Segundo</option>
+                        <option value="tercmeca">Terceiro</option>
+                    </select>
+                </td>
+            </tr>
+            <script>
+
+            </script>
+        </table>
+                <!-- QUAL CIDADE MORA -->
+                <tr>
+                    <td><p></p></td>
+                </tr>
+                <tr>
+                    <td><p></p></td>
+                </tr>
+        <tr>
+        <h3>Cidade</h3><br>
+        <td>Divinópolis:</td>
+        <td><img src='Azul.jpg' widht='30%' height='35px' class="rounded-image"></td>
+        <td>Porcentagem: 33%</td>
+        <tr>
+            <td><p></p></td>
+        </tr>
+        <td>Outras Cidades:</td>
+        <td><img src='Azul.jpg' widht='30%' height='35px' class="rounded-image"></td>
+        <td>Porcentagem:</td>
+        </tr> 
+        <!-- MUDOU DE CIDADE -->    
+        <tr>
+            <td><p></p></td>
+        </tr><tr>
+            <td><p></p></td>
+        </tr>
+        <tr>
+        <h3>Mudou de cidade para estudar no CEFET-MG?</h3>
+            <td>Sim:</td>
+            <td><img src='Azul.jpg' widht='30%' height='35px' class="rounded-image"></td>
+            <td>Porcentagem:</td>
+            <tr>
+                <td><p></p></td>
+            </tr>
+            <td>Não:</td>
+            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
+            <td>Porcentagem:</td>
+        </tr>
+            <!-- MUDOU DE ESTADO -->   
+            <tr>
+                <td><p></p></td>
+            </tr>
+            <tr>
+                <td><p></p></td>
+            </tr>
+        <tr>
+        <h3>Mudou de estado para estudar no CEFET-MG?</h3>
+            <td>Sim:</td>
+            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
+            <td>Porcentagem:</td>
+            <tr>
+                <td><p></p></td>
+            </tr>
+            <td>Não:</td>
+            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
+            <td>Porcentagem:</td>
+        <tr>     
+        <!-- MEIOS DE TRANSPORTE -->
+        <tr>
+            <td><p></p></td>
+        </tr>
+        <tr>
+            <td><p></p></td>
+        </tr>
+        <tr>
+        <h3>Meio de transporte para se locomover até o CEFET-MG:</h3>
+            <td>Tansporte coletivo particular:</td>
+            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
+            <td>Porcentagem:</td>
+            <tr>
+                <td><p></p></td>
+            </tr>
+            <td>Trasporte coletivo público:</td>
+            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
+            <td>Porcentagem:</td>
+            <tr>
+                <td><p></p></td>
+            </tr>
+            <td>Transporte individual:</td>
+            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
+            <td>Porcentagem:</td>
+            <tr>
+                <td><p></p></td>
+            </tr>
+            <td>A pé:</td>
+            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
+            <td>Porcentagem:</td>
+        </tr>
+        <!-- MEIOS DE TRANSPORTE -->
+        <tr>
+            <td><p></p></td>
+        </tr>
+        <tr>
+            <td><p></p></td>
+        </tr>
+        <tr>
+            <h3>Meio de transporte para se locomover na volta pra casa:</h3>
+            <td>Tansporte coletivo particular:</td>
+            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
+            <td>Porcentagem:</td>
+            <tr>
+                <td><p></p></td>
+            </tr>
+            <td>Trasporte coletivo público:</td>
+            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
+            <td>Porcentagem:</td>
+            <tr>
+                <td><p></p></td>
+            </tr>
+            <td>Transporte individual:</td>
+            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
+            <td>Porcentagem:</td>
+            <tr>
+                <td><p></p></td>
+            </tr>
+            <td>A pé:</td>
+            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
+            <td>Porcentagem:</td>
+        </tr>
+        <canvas class="line-chart"></canvas>
+        <div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </div>
+        <script>
+            var ctx= document.getElementsByClassName("line-chart");
+            var chartGraph= new Chart(ctx,{
+                type: 'bar'
+            });
+        </script>

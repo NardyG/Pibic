@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Pesquisa de localização do aluno</title>
+    <style>   
+      .mudouestado{display:none;}
+      input[value='sim']:checked + label +.mudouestado{display:block;}
+      #novo{display:none}
+      #AnoIntegrado{display:block;}
+      #AnoNoturno{display:none;}
+      #AnoGraduacao{display:none;}
+      #Bairro1{display:block;}
+      .container{
+      padding-left: 10%;
+      padding-right: 10%;
+      }
+  </style>
+</head>
+<body>
+  <!-- Adicionando o Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+	<!-- Criando a barra de navegação -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <table>
+      <tr>
+        <td><img src="Logo_CEFET-MG.png" alt="" width="70" height="70" class="d-inline-block align-text-top"></td>
+        <td><a class="navbar-brand" href="#">Mapeamento dos alunos do CEFET-MG de Divinópolis</a></td>
+      </tr>
+    </table>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="a.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="b.html">Formulário</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="C.html">Gráficos</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+    <!-- Adicionando o JavaScript do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+    
+    
+    
+    
+      <center><h1></h1></center>
+    <div class="alert alert-primary" role="alert">
+        <center> O preenchimento do formulário a seguir faz parte do andamento do projeto de iniciação cientifica desenvolvido pelos alunos Arthur Nardy Souza, Carlos Eduardo e pela aluna Livia Sales Fonseca, orientado pela professora Nádia Cristina Mello e coorientado pelo professor Alisson Marques da Silva. Todos os alunos do CEFET-MG, campus Divinópolis deverão responde-lo. Obrigado pela colaboração. </center>
+      </div>
+      <div class="container">
+    <form>
+        <fieldset>
+            <legend>Informações do aluno</legend>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Nome Completo:</label><br>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+              </div>    
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Email:</label><br>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+              </div>  
+            <p></p>
+            <label for="curso">Curso:</label>
+            <select name="curso" id="curso1" onchange="myFunction()" class="form-select" aria-label="Default select example">
+              <option value="info">Informática Integrado</option>
+              <option value="meca">Mecatronica Integrado</option>
+              <option value="pm">Produção de Moda Integrado</option>
+              <option value="eletro">Eletromecânica Noturno</option>
+              <option value="infint">Informática para Internet Noturno</option>
+              <option value="designmoda">Design de Moda</option>
+              <option value="engmeca">Engenharia Mecatrônica</option>
+              <option value="engcom">Engenharia da Computação</option>
+          </select>
+            <p></p>
+           <label for="ano">Ano que cursa:</label>
+           <div id="AnoIntegrado">
+            <select name="ano" id="ano" class="form-select" aria-label="Default select example">
+                <option value="1">1º ano</option>
+                <option value="2">2º ano</option>
+                <option value="3">3º ano</option>
+            </select> 
+        </div>
+        <div id="AnoNoturno">
+          <select name="ano" id="ano" class="form-select" aria-label="Default select example">
+              <option value="1">1º ano</option>
+              <option value="2">2º ano</option>
+          </select> 
+      </div>
+      <div id="AnoGraduacao">
+        <select name="ano" id="ano" class="form-select" aria-label="Default select example">
+            <option value="1">1º período</option>
+            <option value="2">2º período</option>
+            <option value="3">3º período</option>
+            <option value="4">4º período</option>
+            <option value="5">5º período</option>
+            <option value="6">6º período</option>
+            <option value="7">7º período</option>
+            <option value="8">8º período</option>
+            <option value="9">9º período</option>
+            <option value="10">10º período</option>
+        </select> 
+    </div>
+    <script>
+      function myFunction() {
+      var curso = document.getElementById("curso1").value;
+      let anoInt = document.getElementById("AnoIntegrado");
+      let anoNot = document.getElementById("AnoNoturno");
+      let anoGrad = document.getElementById("AnoGraduacao");
+      if(curso=="info" || curso == "meca" || curso =="pm"){
+      anoInt.style.cssText='display: block;';}
+      else{anoInt.style.cssText='display:none;';}
+
+      if(curso == "eletro"|| curso =="infint"){
+      anoNot.style.cssText='display:block;';
+      }else{anoNot.style.cssText='display:none;';}
+
+      if(curso =="designmoda"||curso=="engmeca"|| curso =="engcom"){
+      anoGrad.style.cssText='display:block;';
+      }else{anoGrad.style.cssText='display:none;';}
+      }
+      </script>
+      <p></p>
+      <div><label for="cidade">Cidade onde mora atualmente:</label>
+        <select name="cidade" id="cidade" onchange="bairroFunction()" class="form-select" aria-label="Default select example">
+            <option value="1" id="cidade">Divinópolis</option>
+            <option value="2" id="cidade">Outra</option>
+        </select> <p></p>
+    </div>
+    <div id="Bairro1"><label for="Bairro">Bairro:</label>
+        <select name="Bairro" id="bairro" class="form-select" aria-label="Default select example">
+            <option value="Afonso Pena">Afonso Pena</option> <option value="Alterosa">Alterosa</option> <option value="Alto São Vicente">Alto São Vicente</option> <option value="Alvorada">Alvorada</option> <option value="Anchieta">Anchieta</option> <option value="Antares">Antares</option> <option value="Antônio Fonseca">Antônio Fonseca</option> <option value="Área Rural de Divinópolis">Área Rural de Divinópolis</option> <option value="Bairro da Luz">Bairro da Luz</option> <option value="Bela Vista">Bela Vista</option> <option value="Belo Vale">Belo Vale</option> <option value="Belvedere">Belvedere</option> <option value="Belvedere II">Belvedere II</option> <option value="Bom Pastor">Bom Pastor</option> <option value="Campina Verde">Campina Verde</option> <option value="Casa Nova">Casa Nova</option> <option value="Catalão">Catalão</option> <option value="Centro">Centro</option> <option value="Chácara Santa Rita">Chácara Santa Rita</option> <option value="Chácaras Beira Rio">Chácaras Beira Rio</option> <option value="Chácaras Belo Horizonte">Chácaras Belo Horizonte</option> <option value="Chácaras Bom Retiro">Chácaras Bom Retiro</option> <option value="Chácaras Sambeca-Núcleo Urbano Roseiras">Chácaras Sambeca-Núcleo Urbano Roseiras</option> <option value="Chanadour">Chanadour</option> <option value="Cidade Jardim">Cidade Jardim</option> <option value="Conjunto Habitacional Dom Cristiano">Conjunto Habitacional Dom Cristiano</option> <option value="Costa Azul">Costa Azul</option> <option value="Danilo Passos">Danilo Passos</option> <option value="Danilo Passos II">Danilo Passos II</option> <option value="Davanuze">Davanuze</option> <option value="Del-Rey">Del-Rey</option> <option value="Distrito Industrial Coronel Jovelino Rabelo">Distrito Industrial Coronel Jovelino Rabelo</option> <option value="Do Carmo">Do Carmo</option> <option value="Dom Pedro II">Dom Pedro II</option> <option value="Dona Quita">Dona Quita</option> <option value="Dona Rosa">Dona Rosa</option> <option value="Doutor José Thomaz">Doutor José Thomaz</option> <option value="Dulphe Pinto de Aguiar">Dulphe Pinto de Aguiar</option> <option value="Eldorado">Eldorado</option> <option value="Esplanada">Esplanada</option>
+<option value="Exposição">Exposição</option> <option value="Fábio Notini">Fábio Notini</option> <option value="Floramar">Floramar</option> <option value="Floresta">Floresta</option> <option value="Gafanhoto">Gafanhoto</option> <option value="Geraldo Pereira">Geraldo Pereira</option> <option value="Grajaú">Grajaú</option> <option value="Halin Souki">Halin Souki</option> <option value="Icaraí">Icaraí</option> <option value="III Prolongamento do Bairro Bom Pastor">III Prolongamento do Bairro Bom Pastor</option> <option value="Industrial">Industrial</option> <option value="Interlagos">Interlagos</option> <option value="Ipanema">Ipanema</option> <option value="Ipiranga">Ipiranga</option> <option value="Itacolomi">Itacolomi</option> <option value="Itaí">Itaí</option> <option value="Jardim Alterosa">Jardim Alterosa</option> <option value="Jardim Betânia">Jardim Betânia</option> <option value="Jardim Brasília">Jardim Brasília</option> <option value="Jardim Candelária">Jardim Candelária</option> <option value="Jardim Candidés">Jardim Candidés</option> <option value="Jardim Copacabana">Jardim Copacabana</option> <option value="Jardim das Acácias">Jardim das Acácias</option> <option value="Jardim das Mansões">Jardim das Mansões</option> <option value="Jardim Nova América">Jardim Nova América</option> <option value="Jardim Real">Jardim Real</option> <option value="Jardinópolis">Jardinópolis</option> <option value="João Antônio Gonçalves">João Antônio Gonçalves</option> <option value="João Paulo II">João Paulo II</option> <option value="Juscelino Kubitschek">Juscelino Kubitschek</option> <option value="Juza Fonseca">Juza Fonseca</option> <option value="Levindo Paula Pereira">Levindo Paula Pereira</option> <option value="Liberdade">Liberdade</option> <option value="Mangabeiras">Mangabeiras</option> <option value="Manoel Valinhas">Manoel Valinhas</option> <option value="Mar e Terra">Mar e Terra</option> <option value="Marajó">Marajó</option> <option value="Maria Helena">Maria Helena</option> <option value="Maria Peçanha">Maria Peçanha</option> <option value="Morada Nova">Morada Nova</option>
+<option value="Aeroporto">Aeroporto</option> <option value="Alvorada">Alvorada</option> <option value="Antonio Honório">Antonio Honório</option> <option value="Bairro Manoel Valinhas">Bairro Manoel Valinhas</option> <option value="Baronesa">Baronesa</option> <option value="Belém">Belém</option> <option value="Belo Horizonte">Belo Horizonte</option> <option value="Bom Jardim">Bom Jardim</option> <option value="Bom Pastor">Bom Pastor</option> <option value="Bom Retiro">Bom Retiro</option> <option value="Bom Retiro Novo">Bom Retiro Novo</option> <option value="Bosque">Bosque</option> <option value="Campestre">Campestre</option> <option value="Centro">Centro</option> <option value="Chácara da Baronesa">Chácara da Baronesa</option> <option value="Chácara das Palmeiras">Chácara das Palmeiras</option> <option value="Cidade Industrial">Cidade Industrial</option> <option value="Cidade Universitária">Cidade Universitária</option> <option value="Cidade Vera Cruz">Cidade Vera Cruz</option> <option value="Cidade da Baronesa">Cidade da Baronesa</option> <option value="Conceição">Conceição</option> <option value="Doutor Walchir Resende Costa">Doutor Walchir Resende Costa</option> <option value="Encantado">Encantado</option> <option value="Exposição">Exposição</option> <option value="Fonte Boa">Fonte Boa</option> <option value="Fortaleza">Fortaleza</option> <option value="Graças">Graças</option> <option value="Holanda">Holanda</option> <option value="Herculano Yanes">Herculano Yanes</option> <option value="Lagoa dos Mandarins">Lagoa dos Mandarins</option> <option value="Lagoa Park">Lagoa Park</option> <option value="Libério">Libério</option> <option value="Lourdes">Lourdes</option> <option value="Manoel Valinhas">Manoel Valinhas</option> <option value="Morumbi">Morumbi</option> <option value="Nações">Nações</option> <option value="Niterói">Niterói</option> <option value="Nossa Senhora da Conceição">Nossa Senhora da Conceição</option> <option value="Nossa Senhora das Graças">Nossa Senhora das Graças</option>
+<option value="Nossa Senhora de Lourdes">Nossa Senhora de Lourdes</option> <option value="Nova Fortaleza">Nova Fortaleza</option> <option value="Nova Holanda">Nova Holanda</option> <option value="Nova Suíça">Nova Suíça</option> <option value="Novo Paraíso">Novo Paraíso</option> <option value="Oliveiras">Oliveiras</option> <option value="Orion">Orion</option> <option value="Pacaembu">Pacaembu</option> <option value="Padre Eustáquio">Padre Eustáquio</option> <option value="Padre Herculano Yanes">Padre Herculano Yanes</option> <option value="Padre Libério">Padre Libério</option> <option value="Paraíso">Paraíso</option> <option value="Parque Jardim Capitão Silva">Parque Jardim Capitão Silva</option> <option value="Planalto">Planalto</option> <option value="Ponte Funda">Ponte Funda</option> <option value="Porto Velho">Porto Velho</option> <option value="Primavera">Primavera</option> <option value="Prolongamento I do Bairro Manoel Valinhas">Prolongamento I do Bairro Manoel Valinhas</option> <option value="Quinta das Palmeiras">Quinta das Palmeiras</option> <option value="Quintino">Quintino</option> <option value="Rancho Alegre">Rancho Alegre</option> <option value="Realengo">Realengo</option> <option value="Residencial Castelo">Residencial Castelo</option> <option value="Residencial Doutor Walchir Resende Costa">Residencial Doutor Walchir Resende Costa</option> <option value="Residencial Fonte Boa">Residencial Fonte Boa</option> <option value="Residencial Lagoa dos Mandarins">Residencial Lagoa dos Mandarins</option> <option value="Residencial Lagoa Park">Residencial Lagoa Park</option> <option value="Residencial Morumbi">Residencial Morumbi</option> <option value="Sagrada Família">Sagrada Família</option> <option value="Santa Clara">Santa Clara</option> <option value="Santa Lúcia">Santa Lúcia</option> <option value="Santa Luzia">Santa Luzia</option> <option value="Santa Marta">Santa Marta</option> <option value="Santa Rosa">Santa Rosa</option> <option value="Santa Tereza">Santa Tereza</option> <option value="Santo André">Santo André</option> <option value="Santo Antônio">Santo Antônio</option> <option value="Santos Dumont">Santos Dumont</option>
+<option value="São Bento">São Bento</option> <option value="São Caetano">São Caetano</option> <option value="São Domingos">São Domingos</option> <option value="São Geraldo">São Geraldo</option> <option value="São João de Deus">São João de Deus</option> <option value="São José">São José</option> <option value="São Judas Tadeu">São Judas Tadeu</option> <option value="São Lucas">São Lucas</option> <option value="São Luís">São Luís</option> <option value="São Miguel">São Miguel</option> <option value="São Paulo">São Paulo</option> <option value="São Roque">São Roque</option> <option value="São Sebastião">São Sebastião</option> <option value="São Simão">São Simão</option> <option value="Serra Verde">Serra Verde</option> <option value="Sidil">Sidil</option> <option value="Terra Azul">Terra Azul</option> <option value="Tietê">Tietê</option> <option value="Universitário">Universitário</option> <option value="Vale do Sol">Vale do Sol</option> <option value="Vila Belo Horizonte">Vila Belo Horizonte</option> <option value="Vila Cruzeiro">Vila Cruzeiro</option>
+<option value="Vila das Roseiras">Vila das Roseiras</option> <option value="Vila Espírito Santo">Vila Espírito Santo</option> <option value="Vila Minas Gerais">Vila Minas Gerais</option> <option value="Vila Romana">Vila Romana</option> <option value="Vivendas da Exposição">Vivendas da Exposição</option> <option value="Xavante">Xavante</option>
+
+        </select> <p></p>
+    </div>
+    
+    
+    <script>
+                function bairroFunction() {
+                var cidade = document.getElementById("cidade").value;
+                let bairro = document.getElementById("Bairro1");
+                if(cidade=="Divinópolis"){
+                bairro.style.cssText='display: block;';}
+                else{bairro.style.cssText='display:none;';}}
+    </script>
+<p></p>
+<div><label>Mudou de cidade para estudar no CEFET-MG?</label><br>
+  <input type="radio" name="mudoucidade" value="nao" class="form-check-input"><label class="form-check-label"> Não</label><br>
+  <input type="radio" name="mudoucidade" value="sim" class="form-check-input"><label class="form-check-label"> Sim</label>
+  <div class="mudouestado">
+      <p></p>
+          <div> <label for="mudoue" class="form-label" >Cite-a:</label>
+              <input type="text" name="cidade" class="form-control">
+              <p></p>
+                  </div>  
+                  </div></div>
+<p></p>
+  <div><label>Mudou de estado para estudar no CEFET-MG?</label><br>
+  <input type="radio" name="mudouestado" value="nao" class="form-check-input"><label class="form-check-label"> Não</label><br>
+  <input type="radio" name="mudouestado" value="sim" class="form-check-input"><label class="form-check-label"> Sim</label>
+  <div class="mudouestado">
+      <p></p>
+          <div> <label for="mudoue">Cite-o:</label>
+              <select name="ano" id="ano" class="form-select" aria-label="Default select example">
+                  <option value="Acre">Acre</option>
+                  <option value="Alagoas">Alagoas</option>
+                  <option value="Amapá">Amapá</option>
+                  <option value="Amazonas">Amazonas</option>
+                  <option value="Bahia">Bahia</option>
+                  <option value="Ceara">Ceará</option>
+                  <option value="Distrito Federal">Distrito Federal</option>
+                  <option value="Espirito Santo">Espírito Santo</option>
+                  <option value="Goias">Goiás</option>
+                  <option value="Maranhao">Maranhão</option>
+                  <option value="Mato Grosso">Mato Grosso</option>
+                  <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                  <option value="Para">Pará</option>
+                  <option value="Parana">Paraná</option>
+                  <option value="Pernambuco">Pernambuco</option>
+                  <option value="Piaui">Piauí</option>
+                  <option value="Rio de Janeiro">Rio de Janeiro</option>
+                  <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                  <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                  <option value="Rondonia">Rondônia</option>
+                  <option value="Roraima">Roraima</option>
+                  <option value="Santa Catarina">Santa Catarina</option>
+                  <option value="Sao Paulo">São Paulo</option>
+                  <option value="Sergipe">Sergipe</option>
+                  <option value="Tocantins">Tocantins</option>
+              </select> 
+              <p></p>
+                  </div>  
+                  </div></div>   
+           <p></p>
+           <label for="transporte">Meio de transporte para se locomover até o CEFET-MG:</label><br>
+           <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Tansporte coletivo particular
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckDefault">
+                Trasporte coletivo público
+            </label>
+          </div><div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Transporte individual
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckDefault">
+                A pé
+            </label>
+          </div>
+           <p>
+
+           </p>
+           <label for="transporte">Meio de transporte para se locomover na volta pra casa:</label><br>
+           <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Tansporte coletivo particular
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+                Trasporte coletivo público
+            </label>
+          </div><div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Transporte individual
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+            <label class="form-check-label" for="flexCheckChecked">
+                A pé
+            </label>
+          </div>
+        </fieldset><br>
+        <p></p>
+        <center><button type="button" id="enviar" class="btn btn-primary" name="btnenviar">Enviar</button></center><p></p>
+    </form></div>
+</body>
+</html>
