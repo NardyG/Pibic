@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <title>Graficos e Números</title>
     </head>
@@ -44,160 +47,389 @@
             height: 30px;
 }
         </style>
-        <table>
-            <tr>
-                <td>
-                    <h3>Selecione o curso:</h3>
-                </td>
-                <td>
-                    <select name="curso" id="curso1" onchange="cursoFunction()" class="form-select" aria-label="Default select example">
-                        <option value="meca">Mecatrônica</option>
-                        <option value="pm">Produção de Moda</option>
-                        <option value="info">Tecnico em Informáica</option>
-                        </select>
-                </td>
-            </tr>           
-            <tr>
-                <td>
-                    <h3>Selecione o ano:</h3>
-                </td>
-                <td>
-                    <select name="ano" id="ano" onchange="anoFunction()" class="form-select" aria-label="Default select example">
-                        <option value="primeca">Primeiro</option>
-                        <option value="segmeca">Segundo</option>
-                        <option value="tercmeca">Terceiro</option>
-                    </select>
-                </td>
-            </tr>
-            <script>
-
-            </script>
         </table>
-                <!-- QUAL CIDADE MORA -->
-                <tr>
-                    <td><p></p></td>
-                </tr>
-                <tr>
-                    <td><p></p></td>
-                </tr>
-        <tr>
-        <h3>Cidade</h3><br>
-        <td>Divinópolis:</td>
-        <td><img src='Azul.jpg' widht='30%' height='35px' class="rounded-image"></td>
-        <td>Porcentagem: 33%</td>
-        <tr>
-            <td><p></p></td>
-        </tr>
-        <td>Outras Cidades:</td>
-        <td><img src='Azul.jpg' widht='30%' height='35px' class="rounded-image"></td>
-        <td>Porcentagem:</td>
-        </tr> 
-        <!-- MUDOU DE CIDADE -->    
-        <tr>
-            <td><p></p></td>
-        </tr><tr>
-            <td><p></p></td>
-        </tr>
-        <tr>
-        <h3>Mudou de cidade para estudar no CEFET-MG?</h3>
-            <td>Sim:</td>
-            <td><img src='Azul.jpg' widht='30%' height='35px' class="rounded-image"></td>
-            <td>Porcentagem:</td>
-            <tr>
-                <td><p></p></td>
-            </tr>
-            <td>Não:</td>
-            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
-            <td>Porcentagem:</td>
-        </tr>
-            <!-- MUDOU DE ESTADO -->   
-            <tr>
-                <td><p></p></td>
-            </tr>
-            <tr>
-                <td><p></p></td>
-            </tr>
-        <tr>
-        <h3>Mudou de estado para estudar no CEFET-MG?</h3>
-            <td>Sim:</td>
-            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
-            <td>Porcentagem:</td>
-            <tr>
-                <td><p></p></td>
-            </tr>
-            <td>Não:</td>
-            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
-            <td>Porcentagem:</td>
-        <tr>     
-        <!-- MEIOS DE TRANSPORTE -->
-        <tr>
-            <td><p></p></td>
-        </tr>
-        <tr>
-            <td><p></p></td>
-        </tr>
-        <tr>
-        <h3>Meio de transporte para se locomover até o CEFET-MG:</h3>
-            <td>Tansporte coletivo particular:</td>
-            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
-            <td>Porcentagem:</td>
-            <tr>
-                <td><p></p></td>
-            </tr>
-            <td>Trasporte coletivo público:</td>
-            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
-            <td>Porcentagem:</td>
-            <tr>
-                <td><p></p></td>
-            </tr>
-            <td>Transporte individual:</td>
-            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
-            <td>Porcentagem:</td>
-            <tr>
-                <td><p></p></td>
-            </tr>
-            <td>A pé:</td>
-            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
-            <td>Porcentagem:</td>
-        </tr>
-        <!-- MEIOS DE TRANSPORTE -->
-        <tr>
-            <td><p></p></td>
-        </tr>
-        <tr>
-            <td><p></p></td>
-        </tr>
-        <tr>
-            <h3>Meio de transporte para se locomover na volta pra casa:</h3>
-            <td>Tansporte coletivo particular:</td>
-            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
-            <td>Porcentagem:</td>
-            <tr>
-                <td><p></p></td>
-            </tr>
-            <td>Trasporte coletivo público:</td>
-            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
-            <td>Porcentagem:</td>
-            <tr>
-                <td><p></p></td>
-            </tr>
-            <td>Transporte individual:</td>
-            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
-            <td>Porcentagem:</td>
-            <tr>
-                <td><p></p></td>
-            </tr>
-            <td>A pé:</td>
-            <td><img src='Azul.jpg' widht='10' height='35px' class="rounded-image"></td>
-            <td>Porcentagem:</td>
-        </tr>
-        <canvas class="line-chart"></canvas>
-        <div>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        </div>
-        <script>
-            var ctx= document.getElementsByClassName("line-chart");
-            var chartGraph= new Chart(ctx,{
-                type: 'bar'
-            });
-        </script>
+        <h1>CIDADE:</h1>
+        <canvas id="myChart1" width="70" height="10"></canvas>
+        
+    <script>
+        var ctx1 = document.getElementById('myChart1').getContext('2d');
+        var myChart1 = new Chart(ctx1, {
+        type: 'bar',
+        data: {
+          labels: ["Divinópolis", "Outra"],
+          datasets: [{
+            label: "1 Meca",
+            data: [28, 5],
+            borderWidth: 6,
+            borderColor: 'rgba(75,0,130)',
+            backgroundColor: 'transparent'
+          },
+          {
+          label: "1 TI",
+            data: [16, 4],
+            borderWidth: 6,
+            borderColor: 'rgba(0,255,127)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "1 Moda",
+            data: [10, 3],
+            borderWidth: 6,
+            borderColor: 'rgba(255,20,147)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "2 Meca",
+            data: [1, 0],
+            borderWidth: 6,
+            borderColor: 'rgba(75,0,130)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "2 TI",
+            data: [0, 0],
+            borderWidth: 6,
+            borderColor: 'rgba(0,255,127)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "2 Moda",
+            data: [7, 1],
+            borderWidth: 6,
+            borderColor: 'rgba(255,20,147)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "3 Meca",
+            data: [12, 1],
+            borderWidth: 6,
+            borderColor: 'rgba(75,0,130)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "3 TI",
+            data: [19, 0],
+            borderWidth: 6,
+            borderColor: 'rgba(0,255,127)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "3 Moda",
+            data: [0, 0],
+            borderWidth: 6,
+            borderColor: 'rgba(255,20,147)',
+            backgroundColor: 'transparent'
+        },
+    ]
+        }
+      });
+    </script><br>
+
+    <h1>Mudou de cidade para estudar no CEFET-MG?</h1><br>
+    <canvas id="myChart2" width="70" height="10"></canvas>
+    <script>
+        var ctx2 = document.getElementById('myChart2').getContext('2d');
+        var myChart2 = new Chart(ctx2, {
+    type: 'bar',
+    data: {
+        labels: ['Sim', 'Não'],
+        datasets: [{
+            label: "1 Meca",
+            data: [26, 4],
+            borderWidth: 6,
+            borderColor: 'rgba(75,0,130)',
+            backgroundColor: 'transparent'
+          },
+          {
+          label: "1 TI",
+            data: [19, 1],
+            borderWidth: 6,
+            borderColor: 'rgba(0,255,127)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "1 Moda",
+            data: [13, 0],
+            borderWidth: 6,
+            borderColor: 'rgba(255,20,147)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "2 Meca",
+            data: [1, 0],
+            borderWidth: 6,
+            borderColor: 'rgba(75,0,130)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "2 TI",
+            data: [0, 0],
+            borderWidth: 6,
+            borderColor: 'rgba(0,255,127)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "2 Moda",
+            data: [7, 1],
+            borderWidth: 6,
+            borderColor: 'rgba(255,20,147)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "3 Meca",
+            data: [10, 3],
+            borderWidth: 6,
+            borderColor: 'rgba(75,0,130)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "3 TI",
+            data: [17, 2],
+            borderWidth: 6,
+            borderColor: 'rgba(0,255,127)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "3 Moda",
+            data: [0, 0],
+            borderWidth: 6,
+            borderColor: 'rgba(255,20,147)',
+            backgroundColor: 'transparent'
+        },
+        ]}
+    },
+);
+      </script><br>
+
+
+            <h1>Mudou de estado para estudar no CEFET-MG?</h1>
+            <canvas id="myChart3" width="70" height="10"></canvas>
+            <script>
+                var ctx3 = document.getElementById('myChart3').getContext('2d');
+                var myChart3 = new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: ['Sim', 'Não'],
+                datasets: [{
+                    label: "1 Meca",
+                    data: [33, 0],
+                    borderWidth: 6,
+                    borderColor: 'rgba(75,0,130)',
+                    backgroundColor: 'transparent'
+                  },
+                  {
+                  label: "1 TI",
+                    data: [20, 0],
+                    borderWidth: 6,
+                    borderColor: 'rgba(0,255,127)',
+                    backgroundColor: 'transparent'
+                },
+                {
+                  label: "1 Moda",
+                    data: [13, 0],
+                    borderWidth: 6,
+                    borderColor: 'rgba(255,20,147)',
+                    backgroundColor: 'transparent'
+                },
+                {
+                  label: "2 Meca",
+                    data: [1, 0],
+                    borderWidth: 6,
+                    borderColor: 'rgba(75,0,130)',
+                    backgroundColor: 'transparent'
+                },
+                {
+                  label: "2 TI",
+                    data: [0, 0],
+                    borderWidth: 6,
+                    borderColor: 'rgba(0,255,127)',
+                    backgroundColor: 'transparent'
+                },
+                {
+                  label: "2 Moda",
+                    data: [8, 0],
+                    borderWidth: 6,
+                    borderColor: 'rgba(255,20,147)',
+                    backgroundColor: 'transparent'
+                },
+                {
+                  label: "3 Meca",
+                    data: [13, 0],
+                    borderWidth: 6,
+                    borderColor: 'rgba(75,0,130)',
+                    backgroundColor: 'transparent'
+                },
+                {
+                  label: "3 TI",
+                    data: [19, 0],
+                    borderWidth: 6,
+                    borderColor: 'rgba(0,255,127)',
+                    backgroundColor: 'transparent'
+                },
+                {
+                  label: "3 Moda",
+                    data: [0, 0],
+                    borderWidth: 6,
+                    borderColor: 'rgba(255,20,147)',
+                    backgroundColor: 'transparent'
+                },
+                ]}
+            },
+        );
+              </script><br>
+
+    <h1>Meio de transporte para se locomover até o CEFET-MG:</h1><br>
+    <canvas id="myChart4" width="70" height="10"></canvas>
+    <script>
+        var ctx4 = document.getElementById('myChart4').getContext('2d');
+        var myChart4 = new Chart(ctx4, {
+    type: 'bar',
+    data: {
+        labels: ['Tansporte coletivo particular', 'Trasporte coletivo público', 'Transporte individual', 'A pé'],
+        datasets: [{
+            label: "1 Meca",
+            data: [13, 5, 8, 5],
+            borderWidth: 6,
+            borderColor: 'rgba(75,0,130)',
+            backgroundColor: 'transparent'
+          },
+          {
+          label: "1 TI",
+            data: [11, 5, 2, 3],
+            borderWidth: 6,
+            borderColor: 'rgba(0,255,127)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "1 Moda",
+            data: [5, 2, 6, 1],
+            borderWidth: 6,
+            borderColor: 'rgba(255,20,147)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "2 Meca",
+            data: [1, 0, 0, 0],
+            borderWidth: 6,
+            borderColor: 'rgba(75,0,130)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "2 TI",
+            data: [0, 0, 0, 0],
+            borderWidth: 6,
+            borderColor: 'rgba(0,255,127)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "2 Moda",
+            data: [4, 1, 2, 0],
+            borderWidth: 6,
+            borderColor: 'rgba(255,20,147)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "3 Meca",
+            data: [4, 3, 1, 5],
+            borderWidth: 6,
+            borderColor: 'rgba(75,0,130)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "3 TI",
+            data: [11, 5, 2, 3],
+            borderWidth: 6,
+            borderColor: 'rgba(0,255,127)',
+            backgroundColor: 'transparent'
+        },
+        {
+          label: "3 Moda",
+            data: [0, 0, , 0],
+            borderWidth: 6,
+            borderColor: 'rgba(255,20,147)',
+            backgroundColor: 'transparent'
+        },
+        ]}
+    },
+);
+      </script><br>
+
+<h1>Meio de transporte para se locomover na volta pra casa:</h1><br>
+
+<canvas id="myChart5" width="70" height="10"></canvas>
+<script>
+    var ctx5 = document.getElementById('myChart5').getContext('2d');
+    var myChart5 = new Chart(ctx5, {
+type: 'bar',
+data: {
+    labels: ['Tansporte coletivo particula', 'Trasporte coletivo público', 'Transporte individual', 'A pé'],
+    datasets: [{
+        label: "1 Meca",
+        data: [11, 5, 7, 3],
+        borderWidth: 6,
+        borderColor: 'rgba(75,0,130)',
+        backgroundColor: 'transparent'
+      },
+      {
+      label: "1 TI",
+        data: [11, 4, 1, 4],
+        borderWidth: 6,
+        borderColor: 'rgba(0,255,127)',
+        backgroundColor: 'transparent'
+    },
+    {
+      label: "1 Moda",
+        data: [5, 2, 4, 3],
+        borderWidth: 6,
+        borderColor: 'rgba(255,20,147)',
+        backgroundColor: 'transparent'
+    },
+    {
+      label: "2 Meca",
+        data: [0, 1, 0, 0],
+        borderWidth: 6,
+        borderColor: 'rgba(75,0,130)',
+        backgroundColor: 'transparent'
+    },
+    {
+      label: "2 TI",
+        data: [0, 0],
+        borderWidth: 6,
+        borderColor: 'rgba(0,255,127)',
+        backgroundColor: 'transparent'
+    },
+    {
+      label: "2 Moda",
+        data: [4, 4, 0, 0],
+        borderWidth: 6,
+        borderColor: 'rgba(255,20,147)',
+        backgroundColor: 'transparent'
+    },
+    {
+      label: "3 Meca",
+        data: [4, 3, 1, 5],
+        borderWidth: 6,
+        borderColor: 'rgba(75,0,130)',
+        backgroundColor: 'transparent'
+    },
+    {
+      label: "3 TI",
+        data: [8, 9, 0, 4],
+        borderWidth: 6,
+        borderColor: 'rgba(0,255,127)',
+        backgroundColor: 'transparent'
+    },
+    {
+      label: "3 Moda",
+        data: [0, 0, 0, 0],
+        borderWidth: 6,
+        borderColor: 'rgba(255,20,147)',
+        backgroundColor: 'transparent'
+    },
+    ]}
+},
+);
+  </script>
+    </form>
+    </body>
+</html>
